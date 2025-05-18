@@ -1,0 +1,30 @@
+*)API for creating User
+url:http://127.0.0.1:8000/taskapp/register/
+methode:post
+body:username,password1,password2,role
+
+*)API for creating Token
+url:http://127.0.0.1:8000/taskapp/Token/
+methode:post
+body:username,password
+
+*)API for create taskapp
+url:http://127.0.0.1:8000/taskapp/tasks/create/
+methode:post
+body:title,dicription,assigned_to
+
+*)API for tasklist
+url:http://127.0.0.1:8000/taskapp/tasks/
+methode:get
+body:nill
+
+*)API for task update
+url:http://127.0.0.1:8000/taskapp/tasks/{id}/
+methode:patch
+body:status,completion_report,worked_hours
+
+*)API for task Delete
+url:http://127.0.0.1:8000/taskapp/task/destroye/{id}/
+methode:delete
+body:nill
+

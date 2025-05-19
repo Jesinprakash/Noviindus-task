@@ -105,29 +105,29 @@ class TaskDeleteView(generics.DestroyAPIView):
 
 
 
-class UserLogin(APIView):
+# class UserLogin(APIView):
 
-    permission_classes = [permissions.IsAuthenticated]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [permissions.IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
 
 
-    def post(self, request, *args, **kwargs):
+    # def post(self, request, *args, **kwargs):
 
-        username = request.data.get("username")
+    #     username = request.data.get("username")
 
-        password = request.data.get("password")
+    #     password = request.data.get("password")
 
-        user = authenticate(username=username, password=password)
+    #     user = authenticate(username=username, password=password)
 
-        if user is not None:
+    #     if user is not None:
            
-            refresh = RefreshToken.for_user(user)
+    #         refresh = RefreshToken.for_user(user)
 
-            access_token = refresh.access_token
+    #         access_token = refresh.access_token
 
-            return Response({
-                'refresh': str(refresh),
-                'access': str(access_token)
-            })
+    #         return Response({
+    #             'refresh': str(refresh),
+    #             'access': str(access_token)
+    #         })
 
-        return Response({"error": "Invalid credentials"})
+    #     return Response({"error": "Invalid credentials"})
